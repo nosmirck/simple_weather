@@ -1,0 +1,1 @@
+class NoWeatherException implements Exception {}

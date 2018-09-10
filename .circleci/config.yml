@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    environment:
+      - LANG: en_US.UTF-8
+    docker:
+      - image: cirrusci/flutter
+    steps:
+      - checkout
+      - run:
+          name: Run Tests
+          command: flutter test 
+      # Enable when build is possible.
+      # - run: 
+      #     name: Build APK
+      #     command: flutter -v build apk

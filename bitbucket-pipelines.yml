@@ -1,0 +1,19 @@
+image: cirrusci/flutter
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - gradle
+          - gradlewrapper
+          - flutter
+        script:
+          - echo "Tests Running"
+          - flutter test
+          # Enable when build is possible
+          #- flutter -v build apk 
+
+definitions:
+  caches:
+    gradlewrapper: ~/.gradle/wrapper
+    flutter: /opt/flutter
