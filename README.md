@@ -25,7 +25,7 @@ Features:
 
 ## Meetup Presentation
 
-The Meetup Presentation can be found [here.](url) 
+The Meetup Presentation can be found [here.](https://github.com/nosmirck/simple_weather/raw/master/presentation/Flutter%20Right.pptx) 
 
 ## Resources (WIP)
 
