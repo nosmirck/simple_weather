@@ -41,6 +41,8 @@ matrix:
           - platform-tools
           - build-tools-28.0.3
           - android-28
+          - build-tools-27.0.3
+          - android-27
           - sys-img-armeabi-v7a-google_apis-28
           - extra-android-m2repository
           - extra-google-m2repository
@@ -64,7 +66,6 @@ matrix:
         - unzip -qq gradle-4.4.1-bin.zip
         - export GRADLE_HOME=$PWD/gradle-4.4.1
         - export PATH=$GRADLE_HOME/bin:$PATH
-        - yes | sudo ./usr/local/android-sdk/sdkmanager --licenses
         - git clone https://github.com/flutter/flutter.git -b beta
       script:
         - ./flutter/bin/flutter -v build apk
