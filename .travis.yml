@@ -11,25 +11,25 @@ matrix:
   include:
     # Runs unit tests without emulators.
     # - env: JOB=PR
-      os: linux
-      language: generic
-      sudo: false
-      addons:
-        apt:
-          # Flutter depends on /usr/lib/x86_64-linux-gnu/libstdc++.so.6 version GLIBCXX_3.4.18
-          sources:
-            - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
-          packages:
-            - libstdc++6
-            - fonts-droid
-      before_script:
-        - git clone https://github.com/flutter/flutter.git -b beta
-        - ./flutter/bin/flutter doctor
-        - gem install coveralls-lcov
-      script:
-        - ./flutter/bin/flutter test --coverage
-      after_success:
-        - coveralls-lcov coverage/lcov.info
+      # os: linux
+      # language: generic
+      # sudo: false
+      # addons:
+      #   apt:
+      #     # Flutter depends on /usr/lib/x86_64-linux-gnu/libstdc++.so.6 version GLIBCXX_3.4.18
+      #     sources:
+      #       - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
+      #     packages:
+      #       - libstdc++6
+      #       - fonts-droid
+      # before_script:
+      #   - git clone https://github.com/flutter/flutter.git -b beta
+      #   - ./flutter/bin/flutter doctor
+      #   - gem install coveralls-lcov
+      # script:
+      #   - ./flutter/bin/flutter test --coverage
+      # after_success:
+      #   - coveralls-lcov coverage/lcov.info
 
     # Builds an APK. Enable when build is possible
     - env: JOB=APK
@@ -70,18 +70,18 @@ matrix:
 
     # Builds an IPA. Enable when build is possible
     # - env: JOB=IPA
-      os: osx
-      language: generic
-      osx_image: xcode9.4
-      before_script:
-        - pip install six
-        - brew update
-        - brew install --HEAD libimobiledevice
-        - brew install ideviceinstaller
-        - brew install ios-deploy
-        - git clone https://github.com/flutter/flutter.git -b beta
-      script:
-        - ./flutter/bin/flutter -v build ios --no-codesign
+      # os: osx
+      # language: generic
+      # osx_image: xcode9.4
+      # before_script:
+      #   - pip install six
+      #   - brew update
+      #   - brew install --HEAD libimobiledevice
+      #   - brew install ideviceinstaller
+      #   - brew install ios-deploy
+      #   - git clone https://github.com/flutter/flutter.git -b beta
+      # script:
+      #   - ./flutter/bin/flutter -v build ios --no-codesign
 
 cache:
   directories:
