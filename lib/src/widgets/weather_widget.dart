@@ -43,7 +43,7 @@ class WeatherWidget extends StatelessWidget {
               Expanded(
                 child: Text(
                   weatherInfo.name.toUpperCase(),
-                  style: TextStyle(fontSize: 30.0),
+                  style: TextStyle(fontSize: 25.0),
                 ),
               ),
             ],
