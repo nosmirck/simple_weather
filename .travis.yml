@@ -4,71 +4,71 @@ matrix:
   fast_finish: true
 
   # Building APK/IPA takes a long time; do not wait for them to finish.
-  allow_failures:
-    # - env: JOB=APK
-    - env: JOB=IPA
+  # allow_failures:
+  #   - env: JOB=APK
+  #   - env: JOB=IPA
 
   include:
     # Runs unit tests without emulators.
-    # - env: JOB=PR
-      # os: linux
-      # language: generic
-      # sudo: false
-      # addons:
-      #   apt:
-      #     # Flutter depends on /usr/lib/x86_64-linux-gnu/libstdc++.so.6 version GLIBCXX_3.4.18
-      #     sources:
-      #       - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
-      #     packages:
-      #       - libstdc++6
-      #       - fonts-droid
-      # before_script:
-      #   - git clone https://github.com/flutter/flutter.git -b beta
-      #   - ./flutter/bin/flutter doctor
-      #   - gem install coveralls-lcov
-      # script:
-      #   - ./flutter/bin/flutter test --coverage
-      # after_success:
-      #   - coveralls-lcov coverage/lcov.info
+    - env: JOB=PR
+      os: linux
+      language: generic
+      sudo: false
+      addons:
+        apt:
+          # Flutter depends on /usr/lib/x86_64-linux-gnu/libstdc++.so.6 version GLIBCXX_3.4.18
+          sources:
+            - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
+          packages:
+            - libstdc++6
+            - fonts-droid
+      before_script:
+        - git clone https://github.com/flutter/flutter.git -b beta
+        - ./flutter/bin/flutter doctor
+        - gem install coveralls-lcov
+      script:
+        - ./flutter/bin/flutter test --coverage
+      after_success:
+        - coveralls-lcov coverage/lcov.info
 
     # Builds an APK. Enable when build is possible
-    # - env: JOB=APK
-      # os: linux
-      # language: android
-      # android:
-      #   components:
-      #     - tools
-      #     - platform-tools
-      #     - build-tools-28.0.0
-      #     - android-28
-      #     - build-tools-27.0.3
-      #     - android-27
-      #     - sys-img-armeabi-v7a-google_apis-28
-      #     - extra-android-m2repository
-      #     - extra-google-m2repository
-      #     - extra-google-android-support
-      #   licenses:
-      #     - 'android-sdk-preview-license-.+'
-      #     - 'android-sdk-license-.+'
-      #     - 'google-gdk-license-.+'
-      # jdk: oraclejdk8
-      # sudo: false
-      # addons:
-      #   apt:
-      #     # Flutter depends on /usr/lib/x86_64-linux-gnu/libstdc++.so.6 version GLIBCXX_3.4.18
-      #     sources:
-      #       - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
-      #     packages:
-      #       - libstdc++6
-      #       - fonts-droid
-      # before_script:
-      #   - wget http://services.gradle.org/distributions/gradle-4.4.1-bin.zip
-      #   - unzip -qq gradle-4.4.1-bin.zip
-      #   - export GRADLE_HOME=$PWD/gradle-4.4.1
-      #   - export PATH=$GRADLE_HOME/bin:$PATH
-      #   - git clone https://github.com/flutter/flutter.git -b beta
-      # script:
-      #   - ./flutter/bin/flutter -v build apk
+    - env: JOB=APK
+      os: linux
+      language: android
+      android:
+        components:
+          - tools
+          - platform-tools
+          - build-tools-28.0.0
+          - android-28
+          - build-tools-27.0.3
+          - android-27
+          - sys-img-armeabi-v7a-google_apis-28
+          - extra-android-m2repository
+          - extra-google-m2repository
+          - extra-google-android-support
+        licenses:
+          - 'android-sdk-preview-license-.+'
+          - 'android-sdk-license-.+'
+          - 'google-gdk-license-.+'
+      jdk: oraclejdk8
+      sudo: false
+      addons:
+        apt:
+          # Flutter depends on /usr/lib/x86_64-linux-gnu/libstdc++.so.6 version GLIBCXX_3.4.18
+          sources:
+            - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
+          packages:
+            - libstdc++6
+            - fonts-droid
+      before_script:
+        - wget http://services.gradle.org/distributions/gradle-4.4.1-bin.zip
+        - unzip -qq gradle-4.4.1-bin.zip
+        - export GRADLE_HOME=$PWD/gradle-4.4.1
+        - export PATH=$GRADLE_HOME/bin:$PATH
+        - git clone https://github.com/flutter/flutter.git -b beta
+      script:
+        - ./flutter/bin/flutter -v build apk
 
     # Builds an IPA. Enable when build is possible
     - env: JOB=IPA
