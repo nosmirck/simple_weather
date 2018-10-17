@@ -64,6 +64,7 @@ matrix:
         - unzip -qq gradle-4.4.1-bin.zip
         - export GRADLE_HOME=$PWD/gradle-4.4.1
         - export PATH=$GRADLE_HOME/bin:$PATH
+        - yes | sudo sdkmanager --licenses
         - git clone https://github.com/flutter/flutter.git -b beta
       script:
         - ./flutter/bin/flutter -v build apk
