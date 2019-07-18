@@ -22,7 +22,8 @@ class WeatherPage extends StatelessWidget {
           InkWell(
               key: Key('temp-scale-button'),
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.symmetric(
+                    vertical: 15.0, horizontal: 20.0),
                 child: StreamBuilder(
                   stream: bloc.isCelsius,
                   builder:

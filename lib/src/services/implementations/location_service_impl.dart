@@ -7,8 +7,8 @@ import 'package:simple_weather/src/services/location_service.dart';
 class LocationServiceImpl implements LocationService {
   LocationServiceImpl();
   Future<Coord> getLastKnownLocation() async {
-    final currentLocation =
-        await Geolocator().getCurrentPosition(LocationAccuracy.high);
+    final currentLocation = await Geolocator()
+        .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
 
     return currentLocation == null
         ? null

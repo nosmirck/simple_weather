@@ -1,5 +1,8 @@
 PODS:
   - Flutter (1.0.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - geolocator (2.1.0):
     - Flutter
   - google_api_availability (1.0.4):
@@ -10,6 +13,9 @@ PODS:
     - Flutter
   - shared_preferences (0.0.1):
     - Flutter
+  - sqflite (0.0.1):
+    - Flutter
+    - FMDB (~> 2.7.2)
 
 DEPENDENCIES:
   - Flutter (from `.symlinks/flutter/ios`)
@@ -18,6 +24,11 @@ DEPENDENCIES:
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
   - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
+  - sqflite (from `.symlinks/plugins/sqflite/ios`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FMDB
 
 EXTERNAL SOURCES:
   Flutter:
@@ -32,15 +43,19 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/permission_handler/ios"
   shared_preferences:
     :path: ".symlinks/plugins/shared_preferences/ios"
+  sqflite:
+    :path: ".symlinks/plugins/sqflite/ios"
 
 SPEC CHECKSUMS:
-  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
-  geolocator: 4adbfa4f25078e702f9b790bb49e4ff52158df6d
-  google_api_availability: b19830d6be60d6b92dce5fc5b9137c31b04afbf1
-  path_provider: 09407919825bfe3c2deae39453b7a5b44f467873
-  permission_handler: ffc5769b295893830703e8a5b9101e47e12da6af
-  shared_preferences: 5a1d487c427ee18fcd3ea1f2a131569481834b53
+  Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  geolocator: a74971b440b1340e7efdd90fef36f54603b69783
+  google_api_availability: f167b87f789fc6f43a2d43d4474c30e97f79ca46
+  path_provider: f96fff6166a8867510d2c25fdcc346327cc4b259
+  permission_handler: 0610fa5977394b485505829c9dd4391d30b1e9a2
+  shared_preferences: 1feebfa37bb57264736e16865e7ffae7fc99b523
+  sqflite: ff1d9da63c06588cc8d1faf7256d741f16989d5a
 
-PODFILE CHECKSUM: 5603be02d3393f65d41a6ec7723dfe9b60eb3708
+PODFILE CHECKSUM: b6a0a141693093b304368d08511b46cf3d1d0ac5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
