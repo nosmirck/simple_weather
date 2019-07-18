@@ -81,12 +81,13 @@ matrix:
       before_script:
         - pip install six
         - brew update
+        - gem install cocoapods
+        - pod setup
         - brew install --HEAD usbmuxd
         - brew unlink usbmuxd
         - brew link usbmuxd
         - brew install --HEAD libimobiledevice
-        - brew install ideviceinstaller ios-deploy cocoapods
-        - pod setup
+        - brew install ideviceinstaller ios-deploy
         - git clone https://github.com/flutter/flutter.git
         - ./flutter/bin/flutter doctor
       script:
