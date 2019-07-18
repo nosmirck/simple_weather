@@ -91,7 +91,7 @@ packages:
       name: cached_network_image
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.1.0"
   charcode:
     dependency: transitive
     description:
@@ -173,7 +173,7 @@ packages:
       name: flutter_cache_manager
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.1.0"
   flutter_driver:
     dependency: "direct dev"
     description: flutter
@@ -214,7 +214,7 @@ packages:
       name: get_it
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.2"
+    version: "1.0.3+2"
   glob:
     dependency: transitive
     description:
@@ -347,21 +347,7 @@ packages:
       name: mockito
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0"
-  multi_server_socket:
-    dependency: transitive
-    description:
-      name: multi_server_socket
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.2"
-  node_preamble:
-    dependency: transitive
-    description:
-      name: node_preamble
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.4.4"
+    version: "4.1.0"
   package_config:
     dependency: transitive
     description:
@@ -452,7 +438,7 @@ packages:
       name: shared_preferences
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.3"
+    version: "0.5.3+4"
   shelf:
     dependency: transitive
     description:
@@ -460,20 +446,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.7.5"
-  shelf_packages_handler:
-    dependency: transitive
-    description:
-      name: shelf_packages_handler
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.4"
-  shelf_static:
-    dependency: transitive
-    description:
-      name: shelf_static
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.8"
   shelf_web_socket:
     dependency: transitive
     description:
@@ -493,20 +465,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.4+2"
-  source_map_stack_trace:
-    dependency: transitive
-    description:
-      name: source_map_stack_trace
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.5"
-  source_maps:
-    dependency: transitive
-    description:
-      name: source_maps
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.10.7"
   source_span:
     dependency: transitive
     description:
@@ -563,24 +521,10 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
-  test:
-    dependency: transitive
-    description:
-      name: test
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.6.3"
   test_api:
     dependency: transitive
     description:
       name: test_api
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.5"
-  test_core:
-    dependency: transitive
-    description:
-      name: test_core
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.5"
@@ -642,4 +586,4 @@ packages:
     version: "2.1.15"
 sdks:
   dart: ">=2.3.0 <3.0.0"
-  flutter: ">=1.2.1 <2.0.0"
+  flutter: ">=1.5.0 <2.0.0"
