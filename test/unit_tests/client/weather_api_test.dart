@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart';
 import 'package:http/testing.dart';
-import 'package:simple_weather/main.dart';
+import 'package:simple_weather/main_test.dart';
 import 'package:simple_weather/src/client/mocked/mock_weather_api_impl.dart';
 import 'package:simple_weather/src/models/weather_model.dart';
 

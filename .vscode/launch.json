@@ -6,13 +6,19 @@
     "configurations": [
         {
             "name": "development",
-            "program": "lib/main.dart",
+            "program": "lib/main_dev.dart",
+            "request": "launch",
+            "type": "dart"
+          },
+          {
+            "name": "uat",
+            "program": "lib/main_prod.dart",
             "request": "launch",
             "type": "dart"
           },
           {
             "name": "production",
-            "program": "lib/main_prod.dart",
+            "program": "lib/main.dart",
             "request": "launch",
             "type": "dart"
           }

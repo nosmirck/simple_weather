@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:simple_weather/main.dart';
+import 'package:simple_weather/main_test.dart';
 import 'package:simple_weather/src/business/weather_bloc.dart';
 
 void main() {

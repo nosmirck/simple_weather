@@ -21,10 +21,10 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  json_annotation:
-  geolocator :
-  shared_preferences:
-  get_it:
+  json_annotation: ^2.4.0
+  geolocator: 
+  shared_preferences: ^0.5.3+4
+  get_it: ^1.0.3+2
   cached_network_image:
 
   # The following adds the Cupertino Icons font to your application.
@@ -36,9 +36,9 @@ dev_dependencies:
     sdk: flutter
   flutter_driver:
     sdk: flutter
-  json_serializable:
-  build_runner:
-  mockito:
+  json_serializable: ^3.0.0
+  build_runner: ^1.0.0
+  mockito: ^4.1.0
 
 
 # For information on the generic Dart part of this file, see the

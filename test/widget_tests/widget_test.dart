@@ -6,7 +6,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:simple_weather/main.dart';
+import 'package:simple_weather/main_test.dart';
 import 'package:simple_weather/src/app.dart';
 import 'package:simple_weather/src/app_config.dart';
 import 'package:simple_weather/src/helpers/conversion_helper.dart';

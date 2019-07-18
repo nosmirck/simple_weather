@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:simple_weather/src/exceptions/exceptions.dart';
 import 'package:simple_weather/src/models/weather_model.dart';
@@ -64,9 +66,10 @@ class WeatherPage extends StatelessWidget {
         builder: (context, AsyncSnapshot<WeatherModel> snapshot) {
           if (snapshot.hasError) {
             return Center(
-              child: snapshot.error is NoWeatherException
+              child: snapshot.error is NoWeatherException ||
+                      snapshot.error is TimeoutException
                   ? Text(LocalizationsProvider.of(context).error)
-                  : Text(snapshot.error),
+                  : Text(snapshot.error.toString()),
             );
           }
           if (!snapshot.hasData) {
