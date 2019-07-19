@@ -23,7 +23,7 @@ matrix:
             - libstdc++6
             - fonts-droid
       before_script:
-        - git clone https://github.com/flutter/flutter.git
+        - git clone https://github.com/flutter/flutter.git -b stable
         - ./flutter/bin/flutter doctor
         - gem install coveralls-lcov
       script:
@@ -68,7 +68,7 @@ matrix:
         - unzip -qq gradle-4.10.2-all.zip
         - export GRADLE_HOME=$PWD/gradle-4.10.2-all
         - export PATH=$GRADLE_HOME/bin:$PATH
-        - git clone https://github.com/flutter/flutter.git
+        - git clone https://github.com/flutter/flutter.git -b stable
         - ./flutter/bin/flutter doctor
       script:
         - ./flutter/bin/flutter -v build apk
@@ -88,7 +88,7 @@ matrix:
         - brew link usbmuxd
         - brew install --HEAD libimobiledevice
         - brew install ideviceinstaller ios-deploy
-        - git clone https://github.com/flutter/flutter.git
+        - git clone https://github.com/flutter/flutter.git -b stable
         - ./flutter/bin/flutter doctor
       script:
         - ./flutter/bin/flutter -v build ios --no-codesign
