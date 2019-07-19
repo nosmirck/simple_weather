@@ -20,7 +20,7 @@ void main() {
         () async {
           if (driver != null) {
             // Closes the connection
-            driver.close();
+            await driver.close();
           }
         },
       );
@@ -49,10 +49,10 @@ void main() {
           TimelineSummary summary = TimelineSummary.summarize(timeline);
 
           // The following line saves the timeline summary to a JSON file.
-          summary.writeSummaryToFile('change_temp_scale', pretty: true);
+          await summary.writeSummaryToFile('change_temp_scale', pretty: true);
 
           // The following line saves the raw timeline data as JSON.
-          summary.writeTimelineToFile('change_temp_scale', pretty: true);
+          await summary.writeTimelineToFile('change_temp_scale', pretty: true);
         },
       );
     },
