@@ -27,8 +27,8 @@ registerDependencies() async {
   ServiceLocator.reset();
   final _mockSharedPrefs = MockSharedPreferences();
 
-  when(_mockSharedPrefs.getBool(typed(any))).thenReturn(true);
-  when(_mockSharedPrefs.setBool(typed(any), typed(any)))
+  when(_mockSharedPrefs.getBool(any)).thenReturn(true);
+  when(_mockSharedPrefs.setBool(any, any))
       .thenAnswer((_) => Future.value(true));
 
   ServiceLocator.registerSingleton<SharedPreferences>(_mockSharedPrefs);
